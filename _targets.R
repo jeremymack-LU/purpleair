@@ -1,0 +1,106 @@
+library(targets)
+
+options(tidyverse.quiet = TRUE)
+tar_option_set(packages = c('tidyverse','lubridate','rdrop2','formattable','zoo'))
+
+source("src/plots.R")
+
+tar_delete(pa_data)
+tar_delete(dropbox.transfer)
+
+list(
+  tar_target(
+    pa_data,
+    pa.data()
+  ),
+  tar_target(
+    pa_plot_20703,
+    pa.plot1(pa_data)
+  ),
+  tar_target(
+    pa_plot_82657,
+    pa.plot2(pa_data)
+  ),
+  tar_target(
+    pa_plot_101980,
+    pa.plot3(pa_data)
+  ),
+  tar_target(
+    pa_plot_108582,
+    pa.plot4(pa_data)
+  ),
+  tar_target(
+    pa_plot_108584,
+    pa.plot5(pa_data)
+  ),
+  tar_target(
+    pa_plot_108706,
+    pa.plot6(pa_data)
+  ),
+  tar_target(
+    pa_plot_108716,
+    pa.plot7(pa_data)
+  ),
+  tar_target(
+    pa_plot_148727,
+    pa.plot8(pa_data)
+  ),
+  tar_target(
+    pa_plot_149118,
+    pa.plot9(pa_data)
+  ),
+  tar_target(
+    plot1.out,{
+      pa_plot_20703
+      plot1_out('output/pa_plot_20703.png')
+    }
+  ),
+  tar_target(
+    plot2.out,{
+      pa_plot_82657
+      plot2_out('output/pa_plot_82657.png')
+    }
+  ),
+  tar_target(
+    plot3.out,{
+      pa_plot_101980
+      plot3_out('output/pa_plot_101980.png')
+    }
+  ),
+  tar_target(
+    plot4.out,{
+      pa_plot_108582
+      plot4_out('output/pa_plot_108582.png')
+    }
+  ),
+  tar_target(
+    plot5.out,{
+      pa_plot_108584
+      plot5_out('output/pa_plot_108584.png')
+    }
+  ),
+  tar_target(
+    plot6.out,{
+      pa_plot_108706
+      plot6_out('output/pa_plot_108706.png')
+    }
+  ),
+  tar_target(
+    plot7.out,{
+      pa_plot_108716
+      plot7_out('output/pa_plot_108716.png')
+    }
+  ),
+  tar_target(
+    plot8.out,{
+      pa_plot_148727
+      plot8_out('output/pa_plot_148727.png')
+    }
+  ),
+  tar_target(
+    plot9.out,{
+      pa_plot_149118
+      plot9_out('output/pa_plot_149118.png')
+    }
+  )
+)
