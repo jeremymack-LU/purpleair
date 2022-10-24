@@ -71,7 +71,7 @@ pa.plot1 <- function(df) {
     scale_x_datetime(expand=c(0,0)) +
     scale_y_continuous(expand=c(0,0), limits=c(0,200)) +
     geom_point(aes(datetime,aqi),size=0.5,alpha=0.3,color='gray',shape=20) +
-    geom_line(aes(datetime,rollapplyr(aqi,30,mean,partial=TRUE))) +
+    geom_line(size=0.25,aes(datetime,rollapplyr(aqi,30,mean,partial=TRUE))) +
     labs(y='Air Quality Index (AQI)',
          x='Date',
          title=paste0("Plot of 7-day AQI data for PurpleAir sensor at ",name)) +
@@ -133,7 +133,7 @@ pa.plot2 <- function(df) {
     scale_x_datetime(expand=c(0,0)) +
     scale_y_continuous(expand=c(0,0), limits=c(0,200)) +
     geom_point(aes(datetime,aqi),size=0.5,alpha=0.3,color='gray',shape=20) +
-    geom_line(aes(datetime,rollapplyr(aqi,30,mean,partial=TRUE))) +
+    geom_line(size=0.25,aes(datetime,rollapplyr(aqi,30,mean,partial=TRUE))) +
     labs(y='Air Quality Index (AQI)',
          x='Date',
          title=paste0("Plot of 7-day AQI data for PurpleAir sensor at ",name)) +
@@ -195,7 +195,7 @@ pa.plot3 <- function(df) {
     scale_x_datetime(expand=c(0,0)) +
     scale_y_continuous(expand=c(0,0), limits=c(0,200)) +
     geom_point(aes(datetime,aqi),size=0.5,alpha=0.3,color='gray',shape=20) +
-    geom_line(aes(datetime,rollapplyr(aqi,30,mean,partial=TRUE))) +
+    geom_line(size=0.25,aes(datetime,rollapplyr(aqi,30,mean,partial=TRUE))) +
     labs(y='Air Quality Index (AQI)',
          x='Date',
          title=paste0("Plot of 7-day AQI data for PurpleAir sensor at ",name)) +
@@ -257,7 +257,7 @@ pa.plot4 <- function(df) {
     scale_x_datetime(expand=c(0,0)) +
     scale_y_continuous(expand=c(0,0), limits=c(0,200)) +
     geom_point(aes(datetime,aqi),size=0.5,alpha=0.3,color='gray',shape=20) +
-    geom_line(aes(datetime,rollapplyr(aqi,30,mean,partial=TRUE))) +
+    geom_line(size=0.25,aes(datetime,rollapplyr(aqi,30,mean,partial=TRUE))) +
     labs(y='Air Quality Index (AQI)',
          x='Date',
          title=paste0("Plot of 7-day AQI data for PurpleAir sensor at ",name)) +
@@ -319,7 +319,7 @@ pa.plot5 <- function(df) {
     scale_x_datetime(expand=c(0,0)) +
     scale_y_continuous(expand=c(0,0), limits=c(0,200)) +
     geom_point(aes(datetime,aqi),size=0.5,alpha=0.3,color='gray',shape=20) +
-    geom_line(aes(datetime,rollapplyr(aqi,30,mean,partial=TRUE))) +
+    geom_line(size=0.25,aes(datetime,rollapplyr(aqi,30,mean,partial=TRUE))) +
     labs(y='Air Quality Index (AQI)',
          x='Date',
          title=paste0("Plot of 7-day AQI data for PurpleAir sensor at ",name)) +
@@ -381,7 +381,7 @@ pa.plot6 <- function(df) {
     scale_x_datetime(expand=c(0,0)) +
     scale_y_continuous(expand=c(0,0), limits=c(0,200)) +
     geom_point(aes(datetime,aqi),size=0.5,alpha=0.3,color='gray',shape=20) +
-    geom_line(aes(datetime,rollapplyr(aqi,30,mean,partial=TRUE))) +
+    geom_line(size=0.25,aes(datetime,rollapplyr(aqi,30,mean,partial=TRUE))) +
     labs(y='Air Quality Index (AQI)',
          x='Date',
          title=paste0("Plot of 7-day AQI data for PurpleAir sensor at ",name)) +
@@ -443,7 +443,7 @@ pa.plot7 <- function(df) {
     scale_x_datetime(expand=c(0,0)) +
     scale_y_continuous(expand=c(0,0), limits=c(0,200)) +
     geom_point(aes(datetime,aqi),size=0.5,alpha=0.3,color='gray',shape=20) +
-    geom_line(aes(datetime,rollapplyr(aqi,30,mean,partial=TRUE))) +
+    geom_line(size=0.25,aes(datetime,rollapplyr(aqi,30,mean,partial=TRUE))) +
     labs(y='Air Quality Index (AQI)',
          x='Date',
          title=paste0("Plot of 7-day AQI data for PurpleAir sensor at ",name)) +
@@ -505,7 +505,7 @@ pa.plot8 <- function(df) {
     scale_x_datetime(expand=c(0,0)) +
     scale_y_continuous(expand=c(0,0), limits=c(0,200)) +
     geom_point(aes(datetime,aqi),size=0.5,alpha=0.3,color='gray',shape=20) +
-    geom_line(aes(datetime,rollapplyr(aqi,30,mean,partial=TRUE))) +
+    geom_line(size=0.25,aes(datetime,rollapplyr(aqi,30,mean,partial=TRUE))) +
     labs(y='Air Quality Index (AQI)',
          x='Date',
          title=paste0("Plot of 7-day AQI data for PurpleAir sensor at ",name)) +
@@ -567,7 +567,7 @@ pa.plot9 <- function(df) {
     scale_x_datetime(expand=c(0,0)) +
     scale_y_continuous(expand=c(0,0), limits=c(0,200)) +
     geom_point(aes(datetime,aqi),size=0.5,alpha=0.3,color='gray',shape=20) +
-    geom_line(aes(datetime,rollapplyr(aqi,30,mean,partial=TRUE))) +
+    geom_line(size=0.25,aes(datetime,rollapplyr(aqi,30,mean,partial=TRUE))) +
     labs(y='Air Quality Index (AQI)',
          x='Date',
          title=paste0("Plot of 7-day AQI data for PurpleAir sensor at ",name)) +

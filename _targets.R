@@ -4,6 +4,7 @@ options(tidyverse.quiet = TRUE)
 tar_option_set(packages = c('tidyverse','lubridate','rdrop2','formattable','zoo'))
 
 source("src/plots.R")
+source("src/dropbox.R")
 
 tar_delete(pa_data)
 tar_delete(dropbox.transfer)
@@ -101,6 +102,24 @@ list(
     plot9.out,{
       pa_plot_149118
       plot9_out('output/pa_plot_149118.png')
+    }
+  ),
+  tar_target(
+    dropbox.transfer,{
+      plot1.out
+      plot2.out
+      plot3.out
+      plot4.out
+      plot5.out
+      plot6.out
+      plot7.out
+      plot8.out
+      plot9.out
+      transfer_plots('output/pa_plot_20703.png','output/pa_plot_82657.png',
+                     'output/pa_plot_101980.png','output/pa_plot_108582.png',
+                     'output/pa_plot_108584.png','output/pa_plot_108706.png',
+                     'output/pa_plot_108716.png','output/pa_plot_148727.png',
+                     'output/pa_plot_149118.png')
     }
   )
 )
